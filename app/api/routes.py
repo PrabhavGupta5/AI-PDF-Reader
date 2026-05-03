@@ -1,5 +1,7 @@
 from fastapi import APIRouter, UploadFile, File
 from app.services.document_service import handle_upload
+from app.services.embedding_service import get_embedding
+from app.services.vector_db_service import search_similar
 
 router = APIRouter()
 
@@ -13,4 +15,10 @@ async def upload_file(file: UploadFile = File(...)):
 
 @router.get("/query")
 def query(q: str):
-    return {"message": f"Query received: {q}"}
+    query_embedding = get_embedding(q)
+    docs = search_similar(query_embedding)
+
+    return {
+        "query": q,
+        "results": docs
+    }

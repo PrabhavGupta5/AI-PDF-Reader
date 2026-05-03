@@ -1,18 +1,20 @@
 from app.utils.file_handler import save_file
 from app.services.pdf_service import extract_text
 from app.services.chunk_service import chunk_text
+from app.services.embedding_service import get_embedding
+from app.services.vector_db_service import store_embeddings
 
 async def handle_upload(file):
     file_path = await save_file(file)
 
-    # Step 1: Extract text
     text = extract_text(file_path)
-
-    # Step 2: Chunk text
     chunks = chunk_text(text)
 
+    embeddings = [get_embedding(chunk) for chunk in chunks]
+
+    store_embeddings(chunks, embeddings)
+
     return {
-        "message": "File processed successfully",
-        "chunks_count": len(chunks),
-        "sample_chunk": chunks[0] if chunks else ""
+        "message": "File processed + embeddings stored",
+        "chunks": len(chunks)
     }
