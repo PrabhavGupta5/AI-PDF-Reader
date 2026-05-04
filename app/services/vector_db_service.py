@@ -12,7 +12,7 @@ def store_embeddings(chunks, embeddings):
         ids=ids
     )
 
-def search_similar(query_embedding, top_k=3):
+def search_similar(query_embedding, top_k=5):
     results = collection.query(
         query_embeddings=[query_embedding],
         n_results=top_k

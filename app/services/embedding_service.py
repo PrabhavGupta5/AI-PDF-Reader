@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="APIKey")
+genai.configure(api_key="Key")
 
 def get_embedding(text: str):
     response = genai.embed_content(
