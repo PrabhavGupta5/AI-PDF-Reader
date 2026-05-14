@@ -34,27 +34,27 @@ Features
 
 Architecture
 
-User Uploads PDF
-        ↓
-Text Extraction
-        ↓
-Text Cleaning
-        ↓
-Chunking
-        ↓
-Embedding Generation
-        ↓
-ChromaDB Vector Storage
-        ↓
-User Query
-        ↓
-Similarity Search
-        ↓
-Relevant Chunks Retrieved
-        ↓
-Gemini LLM
-        ↓
-Context-Aware Answer
+        User Uploads PDF
+                ↓
+        Text Extraction
+                ↓
+        Text Cleaning
+                ↓
+        Chunking
+                ↓
+        Embedding Generation
+                ↓
+        ChromaDB Vector Storage
+                ↓
+        User Query
+                ↓
+        Similarity Search
+                ↓
+        Relevant Chunks Retrieved
+                ↓
+        Gemini LLM
+                ↓
+        Context-Aware Answer
 
 ⸻
 
@@ -85,26 +85,26 @@ Utilities
 
 Project Structure
 
-ai-pdf-chatbot/
-│
-├── app/
-│   ├── main.py
-│   ├── api/
-│   │   └── routes.py
-│   ├── services/
-│   │   ├── document_service.py
-│   │   ├── embedding_service.py
-│   │   ├── vector_service.py
-│   │   └── llm_service.py
-│   ├── utils/
-│   │   └── file_handler.py
-│   └── schemas/
-│       └── request_schema.py
-│
-├── uploads/
-├── requirements.txt
-├── .env
-└── README.md
+        ai-pdf-chatbot/
+        │
+        ├── app/
+        │   ├── main.py
+        │   ├── api/
+        │   │   └── routes.py
+        │   ├── services/
+        │   │   ├── document_service.py
+        │   │   ├── embedding_service.py
+        │   │   ├── vector_service.py
+        │   │   └── llm_service.py
+        │   ├── utils/
+        │   │   └── file_handler.py
+        │   └── schemas/
+        │       └── request_schema.py
+        │
+        ├── uploads/
+        ├── requirements.txt
+        ├── .env
+        └── README.md
 
 ⸻
 
