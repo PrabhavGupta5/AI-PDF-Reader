@@ -114,66 +114,66 @@ Upload PDF
 
 POST /upload
 
-Uploads a PDF document, extracts text, chunks content, generates embeddings, and stores vectors in ChromaDB.
+        Uploads a PDF document, extracts text, chunks content, generates embeddings, and stores vectors in ChromaDB.
 
 ⸻
 
 Query Document
 
 POST /query
-
-Example Request:
-
-{
-  "query": "Summarize this document"
-}
-
-Example Response:
-
-{
-  "answer": "Generated contextual answer",
-  "sources": ["Relevant chunk 1", "Relevant chunk 2"]
-}
+        
+        Example Request:
+        
+        {
+          "query": "Summarize this document"
+        }
+        
+        Example Response:
+        
+        {
+          "answer": "Generated contextual answer",
+          "sources": ["Relevant chunk 1", "Relevant chunk 2"]
+        }
 
 ⸻
 
 Setup Instructions
 
 Clone Repository
-
-git clone <your-github-repo>
-cd ai-pdf-chatbot
+        
+        git clone <your-github-repo>
+        cd ai-pdf-chatbot
 
 ⸻
 
 Create Virtual Environment
 
-python3 -m venv venv
-source venv/bin/activate
+        python3 -m venv venv
+        source venv/bin/activate
 
 ⸻
 
 Install Dependencies
 
-pip install -r requirements.txt
+        pip install -r requirements.txt
 
 ⸻
 
 Configure Environment Variables
 
-Create a .env file:
-
-GEMINI_API_KEY=your_api_key_here
+        Create a .env file:
+        
+        GEMINI_API_KEY=your_api_key_here
 
 ⸻
 
 Run Application
 
-python3 -m uvicorn app.main:app --reload
+        python3 -m uvicorn app.main:app --reload
 
 Swagger UI:
 
-http://127.0.0.1:8000/docs
+        http://127.0.0.1:8000/docs
 
 ⸻
 
